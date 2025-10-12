@@ -1,7 +1,7 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/index.html b/index.html
 new file mode 100644
-index 0000000000000000000000000000000000000000..89821fafb72e675f2381f616178db4638b4f6c72
+index 0000000000000000000000000000000000000000..b86115eda75ee515ab36b95136d1bf0a82eacda4
 --- /dev/null
 +++ b/index.html
 @@ -0,0 +1,348 @@
@@ -17,7 +17,7 @@ index 0000000000000000000000000000000000000000..89821fafb72e675f2381f616178db463
 +      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
 +      rel="stylesheet"
 +    />
-+    <link rel="stylesheet" href="styles.css" />
++    <link rel="stylesheet" href="styles.css?v=20241013" />
 +  </head>
 +  <body>
 +    <header class="topbar">

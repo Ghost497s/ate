@@ -1,10 +1,10 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/script.js b/script.js
 new file mode 100644
-index 0000000000000000000000000000000000000000..ce21bd73f6422bb6dbc79fec901a240b4223af74
+index 0000000000000000000000000000000000000000..d520a95838e121fbaaf344d9a93341c11c9388ac
 --- /dev/null
 +++ b/script.js
-@@ -0,0 +1,1006 @@
+@@ -0,0 +1,1017 @@
 +(() => {
 +  const FALLBACK_STYLE_ID = "fallback-styles-inline";
 +  const FALLBACK_CSS = `:root {
@@ -805,6 +805,13 @@ index 0000000000000000000000000000000000000000..ce21bd73f6422bb6dbc79fec901a240b
 +    document.head.appendChild(style);
 +  }
 +
++  function removeFallbackStyles() {
++    const existing = document.getElementById(FALLBACK_STYLE_ID);
++    if (existing) {
++      existing.remove();
++    }
++  }
++
 +  function stylesheetHasRules(sheet) {
 +    try {
 +      return sheet.cssRules && sheet.cssRules.length > 0;
@@ -831,10 +838,14 @@ index 0000000000000000000000000000000000000000..ce21bd73f6422bb6dbc79fec901a240b
 +    }
 +
 +    const hasRules = sheets.some((sheet) => stylesheetHasRules(sheet));
-+    if (!hasRules) {
++    if (hasRules) {
++      removeFallbackStyles();
++    } else {
 +      injectFallbackStyles();
 +    }
 +  }
++
++  injectFallbackStyles();
 +
 +  if (document.readyState === "complete" || document.readyState === "interactive") {
 +    setTimeout(evaluateStylesheet, 0);

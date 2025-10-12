@@ -1,11 +1,3 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/script.js b/script.js
-new file mode 100644
-index 0000000000000000000000000000000000000000..d520a95838e121fbaaf344d9a93341c11c9388ac
---- /dev/null
-+++ b/script.js
-@@ -0,0 +1,1017 @@
-+(() => {
 +  const FALLBACK_STYLE_ID = "fallback-styles-inline";
 +  const FALLBACK_CSS = `:root {
 +  --bg: #0f172a;

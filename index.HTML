@@ -1,0 +1,358 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..89821fafb72e675f2381f616178db4638b4f6c72
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,348 @@
++<!DOCTYPE html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>All Trade Electric Inc. &amp; Lighting Services</title>
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link
++      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
++      rel="stylesheet"
++    />
++    <link rel="stylesheet" href="styles.css" />
++  </head>
++  <body>
++    <header class="topbar">
++      <div class="container">
++        <div class="brand">
++          <span class="brand-icon" aria-hidden="true">⚡</span>
++          <span>All Trade Electric Inc.</span>
++        </div>
++        <nav>
++          <a href="#services">Services</a>
++          <a href="#why-us">Why Us</a>
++          <a href="#projects">Projects</a>
++          <a href="#booking" class="cta">Book Now</a>
++        </nav>
++      </div>
++    </header>
++
++    <main>
++      <section class="hero">
++        <div class="container hero-content">
++          <div class="hero-text">
++            <h1>Full-Service Electrical Experts for Homes &amp; Businesses</h1>
++            <p>
++              Reliable installation, upgrades, and emergency support for
++              residential and commercial properties. From ground-up builds to
++              modern remodels, we keep your power running safe and strong.
++            </p>
++            <div class="hero-actions">
++              <a class="btn primary" href="#booking">Schedule Service</a>
++              <a class="btn ghost" href="#services">Explore Services</a>
++            </div>
++            <div class="stats">
++              <div>
++                <span class="stat-value">20+</span>
++                <span class="stat-label">Years of experience</span>
++              </div>
++              <div>
++                <span class="stat-value">24/7</span>
++                <span class="stat-label">Emergency response</span>
++              </div>
++              <div>
++                <span class="stat-value">250+</span>
++                <span class="stat-label">Projects completed</span>
++              </div>
++            </div>
++          </div>
++          <div class="hero-card" aria-label="Electrical services overview">
++            <h2>Licensed &amp; Insured Electricians</h2>
++            <ul>
++              <li>Residential &amp; commercial new construction wiring</li>
++              <li>Remodels, upgrades, and smart home integrations</li>
++              <li>Lighting design, panel service, EV chargers &amp; more</li>
++            </ul>
++            <div class="card-footer">
++              <span class="status">Serving All of South Florida.</span>
++              <span class="callout">Call/Text: (305) 934 5257</span>
++            </div>
++          </div>
++        </div>
++      </section>
++
++      <section id="services" class="section">
++        <div class="container">
++          <header class="section-header">
++            <h2>All-in-One Electrical Solutions</h2>
++            <p>
++              Comprehensive residential and commercial services designed to keep
++              your property powered safely and efficiently.
++            </p>
++          </header>
++          <div class="service-grid">
++            <article class="service-card">
++              <div class="icon" aria-hidden="true">🏠</div>
++              <h3>Residential Construction</h3>
++              <p>
++                New home wiring, panel upgrades, lighting layouts, and smart home
++                automation designed around your lifestyle.
++              </p>
++            </article>
++            <article class="service-card">
++              <div class="icon" aria-hidden="true">🏢</div>
++              <h3>Commercial Build-Outs</h3>
++              <p>
++                Tenant improvements, retail and office wiring, code compliance,
++                and preventative maintenance programs.
++              </p>
++            </article>
++            <article class="service-card">
++              <div class="icon" aria-hidden="true">🛠️</div>
++              <h3>Remodels &amp; Upgrades</h3>
++              <p>
++                Rewiring for expansions, service panel upgrades, load balancing,
++                and energy-efficient lighting retrofits.
++              </p>
++            </article>
++            <article class="service-card">
++              <div class="icon" aria-hidden="true">🚨</div>
++              <h3>Emergency &amp; Safety</h3>
++              <p>
++                24/7 outage response, safety inspections, surge protection, and
++                code corrections for peace of mind.
++              </p>
++            </article>
++            <article class="service-card">
++              <div class="icon" aria-hidden="true">🔌</div>
++              <h3>Specialty Installations</h3>
++              <p>
++                EV charging stations, backup generators, data cabling, and
++                custom lighting designs tailored to your needs.
++              </p>
++            </article>
++            <article class="service-card">
++              <div class="icon" aria-hidden="true">📋</div>
++              <h3>Maintenance Contracts</h3>
++              <p>
++                Scheduled inspections, thermal imaging, and ongoing support to
++                maximize uptime for your facilities.
++              </p>
++            </article>
++          </div>
++        </div>
++      </section>
++
++      <section id="why-us" class="section accent">
++        <div class="container">
++          <header class="section-header">
++            <h2>Why Homeowners &amp; Builders Choose All Trade Electric Inc.</h2>
++          </header>
++          <div class="features">
++            <article>
++              <h3>Code-Compliant Craftsmanship</h3>
++              <p>
++                We build every project to the latest NEC standards, handle all
++                permits, and coordinate seamlessly with other trades.
++              </p>
++            </article>
++            <article>
++              <h3>Transparent Pricing</h3>
++              <p>
++                Upfront estimates, detailed project scopes, and clear options so
++                you always know what you are getting and when.
++              </p>
++            </article>
++            <article>
++              <h3>Customer-First Communication</h3>
++              <p>
++                Dedicated project managers, text updates, and follow-up checks to
++                keep you informed from start to finish.
++              </p>
++            </article>
++          </div>
++        </div>
++      </section>
++
++      <section id="projects" class="section">
++        <div class="container">
++          <header class="section-header">
++            <h2>Recent Projects</h2>
++            <p>
++              A sample of our recent electrical installations and upgrades across
++              residential and commercial clients.
++            </p>
++          </header>
++          <div class="project-gallery">
++            <figure>
++              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" alt="Modern kitchen lighting" loading="lazy" />
++              <figcaption>Kitchen remodel with recessed LED lighting and smart dimmers.</figcaption>
++            </figure>
++            <figure>
++              <img src="https://images.unsplash.com/photo-1580894896400-47b1b3c6239d?auto=format&fit=crop&w=900&q=80" alt="Commercial electrical panel" loading="lazy" />
++              <figcaption>Commercial service upgrade and panel labeling for a medical office.</figcaption>
++            </figure>
++            <figure>
++              <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=900&q=80" alt="Electric vehicle charging installation" loading="lazy" />
++              <figcaption>Dual EV charger installation with load management for a multifamily garage.</figcaption>
++            </figure>
++          </div>
++        </div>
++      </section>
++
++      <section id="booking" class="section booking">
++        <div class="container">
++          <header class="section-header">
++            <h2>Book Your Electrical Service</h2>
++            <p>
++              Reserve a licensed electrician for your project. Secure your time by
++              submitting the form and pre-paying the service deposit.
++            </p>
++          </header>
++          <div class="booking-layout">
++            <form id="booking-form" class="booking-form" novalidate>
++              <div class="form-group">
++                <label for="name">Full Name</label>
++                <input type="text" id="name" name="name" required />
++                <small class="error" data-for="name"></small>
++              </div>
++              <div class="form-row">
++                <div class="form-group">
++                  <label for="email">Email</label>
++                  <input type="email" id="email" name="email" required />
++                  <small class="error" data-for="email"></small>
++                </div>
++                <div class="form-group">
++                  <label for="phone">Phone</label>
++                  <input type="tel" id="phone" name="phone" required pattern="[0-9()+\-\s]{7,}" />
++                  <small class="error" data-for="phone"></small>
++                </div>
++              </div>
++              <div class="form-row">
++                <div class="form-group">
++                  <label for="service">Service Type</label>
++                  <select id="service" name="service" required>
++                    <option value="" disabled selected>Select a service</option>
++                    <option value="residential">Residential Construction</option>
++                    <option value="commercial">Commercial Build-Out</option>
++                    <option value="remodel">Remodel or Upgrade</option>
++                    <option value="maintenance">Maintenance / Inspection</option>
++                    <option value="emergency">Emergency Call-Out</option>
++                  </select>
++                  <small class="error" data-for="service"></small>
++                </div>
++                <div class="form-group">
++                  <label for="property">Property Type</label>
++                  <select id="property" name="property" required>
++                    <option value="" disabled selected>Property Type</option>
++                    <option value="single-family">Single-Family Home</option>
++                    <option value="multi-family">Multi-Family</option>
++                    <option value="commercial">Commercial</option>
++                    <option value="industrial">Industrial</option>
++                  </select>
++                  <small class="error" data-for="property"></small>
++                </div>
++              </div>
++              <div class="form-row">
++                <div class="form-group">
++                  <label for="date">Preferred Date</label>
++                  <input type="date" id="date" name="date" required />
++                  <small class="error" data-for="date"></small>
++                </div>
++                <div class="form-group">
++                  <label for="time">Preferred Time</label>
++                  <input type="time" id="time" name="time" required />
++                  <small class="error" data-for="time"></small>
++                </div>
++              </div>
++              <div class="form-group">
++                <label for="details">Project Details</label>
++                <textarea id="details" name="details" rows="4" placeholder="Tell us about the scope, square footage, or any plans you have."></textarea>
++              </div>
++              <button type="submit" class="btn primary full-width">Reserve &amp; Continue to Payment</button>
++              <p class="secure-note">Secure 100% refundable deposit to hold your appointment. You will receive a confirmation email and payment link immediately.</p>
++            </form>
++
++            <aside class="summary" aria-live="polite">
++              <div class="summary-header">
++                <h3>Reservation Summary</h3>
++                <p>Complete the form to see your recommended deposit.</p>
++              </div>
++              <dl class="summary-details">
++                <div>
++                  <dt>Service</dt>
++                  <dd id="summary-service">—</dd>
++                </div>
++                <div>
++                  <dt>Appointment</dt>
++                  <dd id="summary-datetime">—</dd>
++                </div>
++                <div>
++                  <dt>Deposit Due</dt>
++                  <dd id="summary-deposit">$0</dd>
++                </div>
++              </dl>
++              <div class="payment-actions">
++                <button id="pay-button" class="btn secondary" disabled>Pre-Pay Deposit</button>
++                <p class="hint">
++                  Payment opens a secure checkout. Replace the link in
++                  <code>script.js</code> with your Stripe, Square, or PayPal
++                  payment URL.
++                </p>
++              </div>
++              <div id="confirmation" class="confirmation" hidden>
++                <h4>Reservation Pending</h4>
++                <p>
++                  We have received your booking request. Complete the deposit to
++                  secure the appointment. A team member will follow up within one
++                  business day.
++                </p>
++              </div>
++            </aside>
++          </div>
++        </div>
++      </section>
++    </main>
++
++    <footer class="footer">
++      <div class="container footer-content">
++        <div>
++          <div class="brand">
++            <span class="brand-icon" aria-hidden="true">⚡</span>
++            <span>All Trade Electric Inc.</span>
++          </div>
++          <p>
++            Licensed, bonded, and insured electricians delivering quality
++            craftsmanship for residential and commercial projects.
++          </p>
++        </div>
++        <div>
++          <h4>Contact</h4>
++          <ul>
++            <li><a href="tel:13059345257">(305) 934 5257</a></li>
++            <li><a href="mailto:AllTradeElec@gmail.com">AllTradeElec@gmail.com</a></li>
++            <li>530 E 7th Avenue<br />Hialeah, FL 33010</li>
++          </ul>
++        </div>
++        <div>
++          <h4>Hours</h4>
++          <ul>
++            <li>Mon–Fri: 7:00 AM – 5:00 PM</li>
++            <li>Sat &amp; Sun: Emergency Calls Only</li>
++          </ul>
++        </div>
++      </div>
++      <div class="footer-bottom">
++        <small>© <span id="year"></span> All Trade Electric Inc. All rights reserved.</small>
++      </div>
++    </footer>
++
++    <div class="toast" id="toast" role="status" aria-live="assertive" hidden>
++      <span id="toast-message"></span>
++      <button type="button" id="toast-close" aria-label="Dismiss notification">×</button>
++    </div>
++
++    <script src="script.js" defer></script>
++  </body>
++</html>
+ 
+EOF
+)

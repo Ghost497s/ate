@@ -1,7 +1,0 @@
-[build]
-  publish = "."
-  command = ""
-
-# This prevents Netlify from auto-detecting and forcing a framework build step
-[build.environment]
-  NODE_VERSION = "18"

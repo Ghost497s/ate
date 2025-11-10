@@ -1,0 +1,22 @@
+<!-- ============================ assets/logo.svg ============================ -->
+<!-- Save this block as /assets/logo.svg (you can replace later with your official logo) -->
+<!-- Simple, clean SVG wordmark that adapts to CSS color -->
+<svg id="file-assets-logo.svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120" role="img" aria-label="All Trade Electric">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0d3b66"/>
+<stop offset="1" stop-color="#1d66a5"/>
+</linearGradient>
+</defs>
+<rect width="520" height="120" rx="20" fill="#ffffff"/>
+<g transform="translate(18,78)" fill="url(#g)">
+<text x="0" y="0" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="1">ALL TRADE</text>
+</g>
+<g transform="translate(22,108)" fill="#5b6574">
+<text x="0" y="0" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2">E L E C T R I C</text>
+</g>
+<g transform="translate(430,20)" fill="url(#g)">
+<path d="M22 0 L10 18 H22 L8 44 L28 22 H16 L28 0 Z"/>
+</g>
+</svg>
+

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Trade Electric Inc. | South Florida Electrical Specialists</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0a6ebd', // Deep Electric Blue
+                        'secondary': '#f9fafb', // Light Gray Background
+                        'dark': '#1f2937', // Dark Gray for text
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for professional polish */
+        .hero-bg {
+            background: linear-gradient(rgba(31, 41, 55, 0.7), rgba(31, 41, 55, 0.7)), 
+                        url('https://placehold.co/1920x1080/0a6ebd/ffffff?text=Professional+Electrical+Work') no-repeat center center/cover;
+            height: 85vh;
+            min-height: 600px;
+        }
+        .section-header {
+            border-bottom: 3px solid #0a6ebd;
+            display: inline-block;
+            padding-bottom: 0.25rem;
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-white">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-dark text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-bold text-primary">⚡ All Trade Electric</span>
+                    </div>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8 items-center">
+                    <a href="#services" class="text-gray-300 hover:text-primary transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                    <a href="#process" class="text-gray-300 hover:text-primary transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Our Process</a>
+                    <a href="#reviews" class="text-gray-300 hover:text-primary transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Reviews</a>
+                    <a href="#contact" class="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-300 shadow-md">Request Service</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center sm:hidden">
+                    <button id="menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg id="menu-icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#services" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#process" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Our Process</a>
+                <a href="#reviews" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Reviews</a>
+                <a href="#contact" class="bg-primary text-white block px-3 py-2 rounded-md text-base font-medium">Request Service</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg flex items-center justify-center text-center">
+        <div class="max-w-4xl px-4">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 shadow-text">
+                South Florida's Trusted Electrical Contractors
+            </h1>
+            <p class="text-xl text-gray-200 mb-8 font-light">
+                20+ years of licensed, bonded, and insured service for residential and commercial clients.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#contact" class="bg-primary text-white font-semibold py-3 px-8 rounded-lg shadow-xl hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                    Schedule Your Service
+                </a>
+                <a href="tel:3059345257" class="bg-gray-100 text-dark font-semibold py-3 px-8 rounded-lg shadow-xl hover:bg-gray-200 transition duration-300 transform hover:scale-105">
+                    Call (305) 934-5257
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <h3 class="text-4xl font-extrabold text-primary mb-1">20+</h3>
+                    <p class="text-lg font-medium text-dark">Years of Experience</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <h3 class="text-4xl font-extrabold text-primary mb-1">24/7</h3>
+                    <p class="text-lg font-medium text-dark">Emergency Response</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <h3 class="text-4xl font-extrabold text-primary mb-1">5-Star</h3>
+                    <p class="text-lg font-medium text-dark">Client Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-dark inline-block section-header">
+                    Comprehensive Electrical Services
+                </h2>
+                <p class="mt-4 text-xl text-gray-600">
+                    From ground-up wiring to fast troubleshooting, we handle it all.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-secondary p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="text-primary mb-4">
+                         <!-- Residential Icon (Lucide: house) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Residential Wiring</h3>
+                    <p class="text-gray-600">New construction, full home rewiring, panel upgrades, and generator installation for ultimate safety.</p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-secondary p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="text-primary mb-4">
+                        <!-- Commercial Icon (Lucide: building) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-factory"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16Z"/><path d="M17 18h1"/><path d="M17 14h1"/><path d="M17 10h1"/><path d="M12 18h1"/><path d="M12 14h1"/><path d="M12 10h1"/><path d="M7 18h1"/><path d="M7 14h1"/><path d="M7 10h1"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Commercial Build-Outs</h3>
+                    <p class="text-gray-600">Office spaces, retail facilities, load balancing, permitting, and large-scale industrial electrical work.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-secondary p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="text-primary mb-4">
+                        <!-- Troubleshooting Icon (Lucide: wrench) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap-off"><path d="M12.41 6.13 10 10l-4 8h5l2.03-3.61"/><path d="m13 10 2 4h4l-2.32-4.65"/><path d="M2 13h20"/><line x1="2" x2="22" y1="2" y2="22"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Service & Diagnostics</h3>
+                    <p class="text-gray-600">Rapid troubleshooting for outages, faulty wiring, breaker trips, and urgent code violation corrections.</p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="bg-secondary p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="text-primary mb-4">
+                         <!-- Lighting Icon (Lucide: bulb) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb"><path d="M15 14c.2-1 .9-1.5 1.5-2-.2.6-.4 1.3-.6 2-.4.4-.8.8-1.5 1-.4.4-.8.8-1.5 1s-1.5.5-2 1.2"/><path d="M10 20v-3"/><path d="M14 20v-3"/><path d="M10 17v-3"/><path d="M14 17v-3"/><path d="M12 21a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2z"/><path d="M9 11l.5.5"/><path d="M15 11l-.5.5"/><path d="M12 11V5a2 2 0 0 0-2-2v0a2 2 0 0 0 2 2v6z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Custom Lighting</h3>
+                    <p class="text-gray-600">Architectural lighting design, LED retrofits, dimming controls, and exterior illumination solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section id="process" class="py-16 md:py-24 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-dark inline-block section-header">
+                    Our 4-Step Process
+                </h2>
+                <p class="mt-4 text-xl text-gray-600">
+                    Clean, clear, and coordinated electrical work every time.
+                </p>
+            </div>
+            <div class="relative">
+                <!-- Timeline Line (Hidden on small screens) -->
+                <div class="hidden lg:block absolute h-full w-0.5 bg-primary left-1/2 transform -translate-x-1/2"></div>
+                
+                <!-- Step 1: Assessment -->
+                <div class="flex items-center w-full mb-16">
+                    <div class="w-full lg:w-1/2 lg:pr-20">
+                        <div class="p-6 bg-white rounded-xl shadow-xl border-t-4 border-primary">
+                            <span class="text-3xl font-bold text-primary block mb-2">01. Assessment & Plans</span>
+                            <p class="text-gray-600">We start with a thorough review of your needs—whether it's site plans, existing infrastructure, or troubleshooting a current problem.</p>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex w-1/12 justify-center">
+                        <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-lg ring-4 ring-white">1</div>
+                    </div>
+                    <div class="w-full lg:w-1/2 lg:pl-20"></div>
+                </div>
+
+                <!-- Step 2: Detailed Proposal -->
+                <div class="flex items-center w-full mb-16">
+                    <div class="w-full lg:w-1/2 lg:pl-20 lg:order-2">
+                        <div class="p-6 bg-white rounded-xl shadow-xl border-t-4 border-primary">
+                            <span class="text-3xl font-bold text-primary block mb-2">02. Transparent Proposal</span>
+                            <p class="text-gray-600">You receive a clear, detailed scope of work with a fixed price and timeline. No hidden costs or confusing electrician jargon.</p>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex w-1/12 justify-center lg:order-1">
+                        <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-lg ring-4 ring-white">2</div>
+                    </div>
+                    <div class="w-full lg:w-1/2 lg:pr-20 lg:order-1"></div>
+                </div>
+                
+                <!-- Step 3: Installation & Inspection -->
+                <div class="flex items-center w-full mb-16">
+                    <div class="w-full lg:w-1/2 lg:pr-20">
+                        <div class="p-6 bg-white rounded-xl shadow-xl border-t-4 border-primary">
+                            <span class="text-3xl font-bold text-primary block mb-2">03. Installation & Inspection</span>
+                            <p class="text-gray-600">Our licensed team performs the work cleanly and efficiently, coordinating directly with city inspectors for seamless approval.</p>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex w-1/12 justify-center">
+                        <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-lg ring-4 ring-white">3</div>
+                    </div>
+                    <div class="w-full lg:w-1/2 lg:pl-20"></div>
+                </div>
+
+                <!-- Step 4: Lifetime Partnership -->
+                <div class="flex items-center w-full">
+                    <div class="w-full lg:w-1/2 lg:pl-20 lg:order-2">
+                        <div class="p-6 bg-white rounded-xl shadow-xl border-t-4 border-primary">
+                            <span class="text-3xl font-bold text-primary block mb-2">04. Follow-up & Support</span>
+                            <p class="text-gray-600">We view every project as a long-term partnership. Call us anytime for follow-up support, maintenance, or future upgrades.</p>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex w-1/12 justify-center lg:order-1">
+                        <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-lg ring-4 ring-white">4</div>
+                    </div>
+                    <div class="w-full lg:w-1/2 lg:pr-20 lg:order-1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="reviews" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-dark inline-block section-header">
+                    Trusted by South Florida
+                </h2>
+                <p class="mt-4 text-xl text-gray-600">
+                    What our residential and commercial clients say.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-secondary p-8 rounded-xl shadow-lg flex flex-col justify-between">
+                    <p class="italic text-gray-700 mb-6">
+                        "All Trade Electric handled our major office build-out flawlessly. The crew was punctual, tidy, and kept our timeline on track, even with last-minute design changes. Exceptional communication."
+                    </p>
+                    <div class="font-semibold text-primary">— Melissa R., Property Manager</div>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-secondary p-8 rounded-xl shadow-lg flex flex-col justify-between">
+                    <p class="italic text-gray-700 mb-6">
+                        "They diagnosed a complex panel issue within minutes and had power back on before the sun went down. Professional, courteous, and fairly priced. True 24/7 service."
+                    </p>
+                    <div class="font-semibold text-primary">— Javier H., Homeowner (Miami-Dade)</div>
+                </div>
+                <!-- Review 3 -->
+                <div class="bg-secondary p-8 rounded-xl shadow-lg flex flex-col justify-between">
+                    <p class="italic text-gray-700 mb-6">
+                        "The custom restaurant lighting design gets compliments every night. All Trade Electric Inc. translated our vision into a stunning, code-compliant setup with smart controls."
+                    </p>
+                    <div class="font-semibold text-primary">— Dana P., Restaurateur (Broward County)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-16 md:py-24 bg-dark text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-white inline-block section-header border-white">
+                    Request Service or Project Bid
+                </h2>
+                <p class="mt-4 text-xl text-gray-300">
+                    We will confirm your appointment within one business day.
+                </p>
+            </div>
+
+            <!-- Simple Contact Form (Action is placeholder - replace with your Netlify/Formspree endpoint) -->
+            <form action="#" method="POST" class="space-y-6 bg-gray-800 p-8 rounded-xl shadow-2xl">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300">Full Name</label>
+                    <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-primary focus:border-primary bg-gray-700 text-white">
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-300">Phone</label>
+                    <input type="tel" id="phone" name="phone" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-primary focus:border-primary bg-gray-700 text-white">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                    <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-primary focus:border-primary bg-gray-700 text-white">
+                </div>
+                <div>
+                    <label for="service" class="block text-sm font-medium text-gray-300">Type of Service Needed</label>
+                    <select id="service" name="service" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-primary focus:border-primary bg-gray-700 text-white">
+                        <option value="">Select an option</option>
+                        <option value="Residential Construction">Residential Construction / Rewire</option>
+                        <option value="Commercial Construction">Commercial Build-Outs / Upgrade</option>
+                        <option value="Service Call">Service Call / Troubleshooting</option>
+                        <option value="Lighting Design">Custom Lighting Design</option>
+                        <option value="Other">Other Project</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="details" class="block text-sm font-medium text-gray-300">Project Details / Message</label>
+                    <textarea id="details" name="details" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-primary focus:border-primary bg-gray-700 text-white"></textarea>
+                </div>
+                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-medium text-white bg-primary hover:bg-blue-700 transition duration-300">
+                    Submit Request
+                </button>
+                <p class="text-xs text-center text-gray-500 mt-4">
+                    Note: For urgent 24/7 service, please call <a href="tel:3059345257" class="text-primary hover:underline">(305) 934-5257</a>.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-gray-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-400">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Logo & License -->
+                <div class="col-span-2 md:col-span-1">
+                    <span class="text-2xl font-bold text-primary block mb-2">⚡ All Trade Electric</span>
+                    <p class="text-sm">Licensed Contractor: EC13012345</p>
+                    <p class="text-sm mt-4">© 2025 All Trade Electric Inc.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="hover:text-primary transition duration-150">Services</a></li>
+                        <li><a href="#process" class="hover:text-primary transition duration-150">Our Process</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition duration-150">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tel:3059345257" class="hover:text-primary transition duration-150">Phone: (305) 934-5257</a></li>
+                        <li><a href="mailto:AllTradeElec@gmail.com" class="hover:text-primary transition duration-150">Email: AllTradeElec@gmail.com</a></li>
+                        <li>Address: 530 E 7th Avenue, Hialeah, FL</li>
+                    </ul>
+                </div>
+
+                <!-- Service Area -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Service Area</h4>
+                    <p class="text-sm">Miami-Dade, Broward, and Palm Beach counties. Same-day dispatch for urgent calls.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+
+        menuButton.addEventListener('click', () => {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    menuButton.click(); // Programmatically click the button to close and update icons
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>
